@@ -1,0 +1,9 @@
+jps
+stop-all.sh
+start-all.sh
+jps
+haddop fs -mkdir /user
+hadoop fs -mkdir /user/input
+hadoop fs -put input.txt /user/input
+hadoop jar wordcount.jar package_name.className /user/input /user/output
+#localhost:9870 utilities->browseFile system
